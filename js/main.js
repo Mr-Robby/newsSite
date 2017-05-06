@@ -70,4 +70,54 @@ $(function() {
             }
         }
     });
+    regionsMap()
+
 });
+
+function regionsMap() {
+
+    function _init() {
+        _loadMap();
+        _setEvents();
+    }
+
+    function _loadMap() {
+        $.getJSON('js/map.json', function(data) {
+            var jsonMap = data["map"] || null;
+
+            if(jsonMap) {
+                _setMap(jsonMap.replace(/&quot;/g, '"'));
+            }
+        });
+    }
+
+    function _setMap(map) {
+        if($('.js-load-svg').length && map) {
+            $('.js-load-svg').html(map);
+        }
+    }
+
+    function _setEvents() {
+        $('.regions-map').on('mouseenter', '.svg-map-path', function() {
+            $('.regions-menu-list').find('.regions-menu__item').removeClass('active');
+            $('.regions-menu-list').find('.regions-menu__item[data-region="'+ $(this).attr('id') +'"]').addClass('active');
+        });
+
+        $('.regions-map').on('mouseleave', '.svg-map-path', function() {
+            $('.regions-menu-list').find('.regions-menu__item').removeClass('active');
+        });
+
+        $('.regions-map').on('click', '.svg-map-path', function() {
+            window.location.href = $('.regions-menu-list').find('.regions-menu__item[data-region="'+ $(this).attr('id') +'"]').attr('href');
+        });
+
+        $('.regions-menu-list a').hover(function() {
+            $('#menu-map').find('#' + $(this).attr('data-region') + '').addClass('active');
+        },
+        function() {
+            $('#menu-map').find('#' + $(this).attr('data-region') + '').removeClass('active');
+        });
+    }
+
+    return _init()
+}

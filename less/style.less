@@ -16,9 +16,13 @@ body {
 }
 
 .header {
-  padding-top: 35px;
-  background: url("../images/header-bg.png") no-repeat center;
-  background-size: cover;
+
+  &-block {
+    padding-top: 35px;
+    padding-bottom: 40px;
+    background: url("../images/header-bg.png") no-repeat center top;
+    background-size: cover;
+  }
 
   &-container {
     display: flex;
@@ -35,7 +39,7 @@ body {
   &__right {
     display: flex;
     flex-wrap: wrap;
-    flex: 1;
+    width: 66.6666%;
   }
 
   &__logo {
@@ -93,6 +97,58 @@ body {
   }
 }
 
+.regions-menu {
+  width: 100%;
+  display: flex;
+  flex-wrap: wrap;
+
+  &-list {
+    padding-top: 25px;
+    width: 30%;
+  }
+
+  &__item {
+    display: block;
+    text-decoration: none;
+    color: #262626;
+    font-size: 16px;
+    line-height: 1.2em;
+    padding: 5px 20px;
+    position: relative;
+
+    &:hover,
+    &.active {
+      background: #ac9354;
+      color: #ffffff;
+
+      &:after {
+        content: '';
+        width: 100%;
+        height: 100%;
+        position: absolute;
+        right: -80%;
+        top: 0;
+        bottom: 0;
+        background: #ac9354;
+      }
+    }
+  }
+}
+
+.regions-map {
+  width: 70%;
+  position: relative;
+  z-index: 2;
+}
+
+.svg-map-path {
+  cursor: pointer;
+  &:hover,
+  &.active {
+    fill: #ac9455;
+  }
+}
+
 .main-menu {
   display: flex;
   flex-wrap: wrap;
@@ -124,7 +180,6 @@ body {
   &-wrapper {
     background: #db8414;
     min-height: 50px;
-    margin-top: 40px;
   }
 
   .icon-fire {
@@ -956,6 +1011,16 @@ body {
       padding-left: 0;
     }
   }
+
+  .regions-menu__item {
+
+    &:hover {
+      &:after {
+        display: none;
+      }
+    }
+  }
+
 }
 
 @media screen and (max-width: 1025px) {
@@ -969,6 +1034,20 @@ body {
   .info-panel {
     font-size: 16px;
     line-height: 1.2em;
+  }
+
+  .regions-menu-list {
+    display: flex;
+    flex-wrap: wrap;
+    width: 100%;
+    margin-bottom: 10px;
+
+  }
+
+  .regions-map {
+    width: 100%;
+    max-width: 400px;
+    margin: 0 auto 15px;
   }
 }
 
@@ -1010,6 +1089,12 @@ body {
 }
 
 @media screen and (max-width: 768px) {
+  .header__logo {
+    font-size: 42px;
+    line-height: 1.2em;
+    padding-top: 60px;
+  }
+
   .hot-tags .icon-fire {
     display: none;
   }
@@ -1037,7 +1122,9 @@ body {
 
 @media screen and(max-width: 640px) {
   .header {
-    padding-top: 10px;
+    &-block {
+      padding-top: 10px;
+    }
 
     &__left {
       width: 100%;
@@ -1046,6 +1133,14 @@ body {
       display: flex;
       flex-wrap: wrap;
       margin-bottom: 20px;
+    }
+
+    &__right {
+      width: 100%;
+    }
+
+    .regions-menu-list {
+      display: none;
     }
 
     &__logo {
@@ -1084,9 +1179,6 @@ body {
     }
   }
 
-  .hot-tags-wrapper {
-    margin-top: 20px;
-  }
   .vote-block__info {
     padding: 10px;
   }
@@ -1159,6 +1251,10 @@ body {
 }
 
 @media screen and(max-width: 380px) {
+  .regions-menu {
+    display: none;
+  }
+
   .info-panel {
     font-size: 12px;
     line-height: 1.2em;
