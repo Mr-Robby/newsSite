@@ -81,6 +81,9 @@ body {
   background: transparent;
   border: none;
   border-bottom: 1px solid #ac9455;
+  font-family: 'PT Sans', sans-serif;
+  font-size: 20px;
+  font-style: italic;
   -webkit-box-flex: 1;
   -webkit-flex: 1;
       -ms-flex: 1;
@@ -99,6 +102,18 @@ body {
   border-radius: 36px;
   padding: 2px;
   cursor: pointer;
+}
+.header-search_page {
+  width: 60%;
+  margin-top: 0;
+  margin-right: 15px;
+}
+.header-search_page .header-search__input {
+  border-bottom-color: #2a2a2a;
+}
+.header-search_page .header-search__button {
+  border-color: #2a2a2a;
+  color: #2a2a2a;
 }
 .regions-menu {
   width: 100%;
@@ -1171,6 +1186,159 @@ body {
   margin-top: 10px;
   display: block;
 }
+.sidebar-list .icon-date {
+  font-family: 'PT Serif', sans-serif;
+  font-size: 14px;
+  line-height: 1em;
+  text-align: center;
+}
+.sidebar-list .icon-date__num {
+  display: block;
+  text-align: center;
+  font-size: 24px;
+  line-height: 1em;
+  padding-top: 3px;
+}
+.search-page {
+  font-family: 'PT Sans', sans-serif;
+  font-size: 14px;
+  line-height: 1.2em;
+}
+.search-page__search {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: end;
+  -webkit-align-items: flex-end;
+      -ms-flex-align: end;
+          align-items: flex-end;
+}
+.search-page__sorting-link {
+  color: #262626;
+  display: inline-block;
+  font-weight: 700;
+}
+.search-page__sorting-link_active {
+  text-decoration: none;
+  font-weight: 400;
+}
+.search-page__sorting-link:after {
+  content: '';
+  display: inline-block;
+  color: #ac9455;
+  margin-left: 5px;
+}
+.search-page__sorting-link_asc:after {
+  content: '\25B2';
+}
+.search-page__sorting-link_desc:after {
+  content: '\25BC';
+}
+.search-page__sorting-link:hover {
+  text-decoration: none;
+}
+.search-list {
+  margin-top: 40px;
+}
+.search-list-item {
+  border-bottom: 1px solid #2a2a2a;
+  padding: 20px 0;
+}
+.search-list-item__top {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+  -webkit-align-items: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+.search-list-item__date {
+  width: 52px;
+  height: 48px;
+  background: #262626;
+  color: #ac9455;
+  font-family: 'PT Serif', sans-serif;
+  text-align: center;
+  font-size: 14px;
+  line-height: 1;
+}
+.search-list-item__num {
+  font-size: 24px;
+  line-height: 1;
+  display: block;
+  text-align: center;
+  padding-top: 4px;
+}
+.search-list-item__title {
+  font-size: 16px;
+  line-height: 1.4em;
+  font-weight: 700;
+}
+.search-list-item__text {
+  padding: 15px 10px 0 80px;
+  color: #666666;
+}
+.search-list-item__text a {
+  color: #2a2a2a;
+}
+.search-list-item__text a:hover {
+  text-decoration: none;
+}
+.search-list-item__text .search-word {
+  color: #db8414;
+}
+.search-list-crumbs {
+  font-family: 'PT Serif', sans-serif;
+  padding: 0 30px;
+  width: 220px;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+}
+.search-list-crumbs__section {
+  margin-top: 3px;
+  font-weight: 700;
+  text-transform: uppercase;
+  display: block;
+}
+.search-list-crumbs__section .icon-arr-right {
+  color: #ac9455;
+}
+.search-list-crumbs__section .icon-arr-right:before {
+  margin: 0;
+}
+.pager {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+  -webkit-justify-content: space-between;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  margin: 25px 0;
+}
+.pager-link {
+  font: 18px/1.2em 'PT Serif', sans-serif;
+  color: #ac9455;
+  text-decoration: none;
+}
+.pager-link .icon-arr-left {
+  margin-right: 8px;
+}
+.pager-link .icon-arr-left:before {
+  margin: 0;
+  font-size: 14px;
+}
+.pager-link .icon-arr-right {
+  margin-left: 8px;
+}
+.pager-link .icon-arr-right:before {
+  margin: 0;
+  font-size: 14px;
+}
 @media screen and (max-width: 1367px) {
   .main-slider__title {
     font-size: 16px;
@@ -1261,6 +1429,15 @@ body {
   }
   .contacts-form__input-wrapper + .contacts-form__input-wrapper {
     padding-left: 0;
+  }
+  .search-page__search {
+    display: block;
+  }
+  .header-search_page {
+    width: 100%;
+  }
+  .search-page__sorting {
+    margin-top: 20px;
   }
 }
 @media screen and (max-width: 980px) {
