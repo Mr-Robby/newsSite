@@ -177,6 +177,7 @@ body {
 }
 .main-menu__link:hover {
   background: #ac9354;
+  color: #ffffff;
 }
 .hot-tags {
   display: -webkit-box;
