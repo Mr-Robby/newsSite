@@ -13,6 +13,11 @@ body {
   color: #ffffff;
   padding: 15px 0;
   margin-bottom: 15px;
+
+  &_full {
+    margin-bottom: 0;
+    border-bottom: 1px solid #ffffff;
+  }
 }
 
 .header {
@@ -883,6 +888,7 @@ body {
   display: flex;
   flex-wrap: wrap;
   padding-top: 30px;
+  padding-bottom: 40px;
 }
 
 .content-main-text {
@@ -934,12 +940,270 @@ body {
   &-list {
     padding-top: 15px;
     &__item {
+      position: relative;
       display: block;
       text-decoration: none;
       color: #262626;
-      padding: 10px 0;
+      padding: 5px 0 5px 72px;
       border-bottom: 1px solid #ac9455;
+      min-height: 48px;
+      box-sizing: border-box;
+      margin-top: 25px;
+
+      &:first-child {
+        margin-top: 0;
+      }
+
+      &:hover {
+        .icon {
+          background: #ffffff;
+          border: 1px solid #ac9455;
+          color: #ac9455;
+        }
+      }
+
+      .icon {
+        position: absolute;
+        left: 0;
+        bottom: -1px;
+        width: 52px;
+        height: 48px;
+        display: inline-block;
+        background: #ac9455;
+        color: #ffffff;
+        font-size: 32px;
+        text-align: center;
+        vertical-align: middle;
+        line-height: 48px;
+        border: 1px solid transparent;
+      }
     }
+  }
+
+  &-rewards {
+    width: 260px;
+    margin: 0 auto;
+    padding-top: 30px;
+
+    &__item {
+      padding: 10px;
+      border: 1px solid #ac9455;
+
+      img {
+        display: block;
+        width: 100%;
+      }
+    }
+  }
+}
+
+.text-title {
+  font-family: 'PT Sans', sans-serif;
+  font-size: 30px;
+  line-height: 1.2em;
+  font-weight: bold;
+  margin-bottom: 30px;
+}
+
+.office-list {
+  font-family: 'PT Sans', sans-serif;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+
+  .icon {
+    color: #ac9455;
+    font-size: 16px;
+    display: inline-block;
+    width: 25px;
+    vertical-align: middle;
+
+    &:before {
+      margin-left: 0;
+    }
+  }
+
+  .icon-phone {
+    font-size: 21px;
+
+    &:before {
+      width: 0.6em;
+    }
+  }
+
+  &__item {
+    max-width: 210px;
+    margin-bottom: 60px;
+  }
+
+  &__image {
+    display: block;
+    max-width: 100%;
+  }
+
+  &__title {
+    font-family: 'PT Serif', sans-serif;
+    font-size: 17px;
+    line-height: 1.2em;
+    padding: 15px 5px 10px;
+    border-bottom: 1px solid #ac9455;
+  }
+
+  &__text,
+  &__contacts {
+    padding: 3px 5px;
+    line-height: 1.2em;
+    font-size: 14px;
+  }
+
+  &__text {
+    font-weight: 700;
+    padding-top: 6px;
+    padding-bottom: 8px;
+  }
+}
+
+.contacts-form {
+  display: flex;
+  flex-wrap: wrap;
+  font-size: 14px;
+  line-height: 1.2;
+  margin-bottom: 40px;
+
+  &__inputs {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    width: 100%;
+    max-width: 700px;
+  }
+
+  &__title,
+  &__input-wrapper {
+    flex-basis: 30%;
+    max-width: 30%;
+    display: block;
+    box-sizing: border-box;
+  }
+
+  &__title {
+    flex-basis: 40%;
+    max-width: 40%;
+    font-size: 16px;
+    line-height: 1.2em;
+    font-family: 'PT Sans', sans-serif;
+    padding-right: 20px;
+  }
+
+  &__input-wrapper + &__input-wrapper {
+    padding-left: 10px;
+  }
+
+  &__input {
+    width: 100%;
+    padding: 8px 5px;
+    border: none;
+    font-family: 'PT Sans', sans-serif;
+    background: #ededed;
+    color: #444444;
+    display: block;
+    box-sizing: border-box;
+    border-radius: 4px;
+  }
+
+  &__text {
+    margin-top: 10px;
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+
+  &__textarea {
+    flex: 1;
+    resize: none;
+    width: 100%;
+    max-width: 700px;
+    font-family: 'PT Sans', sans-serif;
+    background: #ededed;
+    color: #444444;
+    border: none;
+    padding: 8px 5px;
+    border-radius: 4px;
+    box-sizing: border-box;
+    margin-right: 20px;
+  }
+
+  &__button {
+    width: 80px;
+    height: 80px;
+    border: 1px solid #ac9455;
+    border-radius: 80px;
+    background: none;
+    cursor: pointer;
+
+    .icon {
+      font-size: 26px;
+      line-height: 1;
+      color: #ac9455;
+    }
+
+    &:hover {
+      background: #ac9455;
+
+      .icon {
+        color: #ffffff;
+      }
+    }
+  }
+}
+
+.contacts-map {
+  margin-bottom: 30px;
+}
+
+.contacts-info {
+  display: flex;
+  font-size: 14px;
+  line-height: 1.6em;
+  font-family: 'PT Sans', sans-serif;
+
+  .icon {
+    color: #ac9455;
+    font-size: 16px;
+    display: inline-block;
+    width: 25px;
+    vertical-align: middle;
+
+    &:before {
+      margin-left: 0;
+    }
+  }
+
+  .icon-phone {
+    font-size: 21px;
+
+    &:before {
+      width: 0.6em;
+    }
+  }
+
+  &__left,
+  &__right {
+    flex-basis: 50%;
+    max-width: 50%;
+    box-sizing: border-box;
+
+    p {
+      margin: 0;
+      text-indent: 0;
+    }
+  }
+
+  &__link {
+    color: #262626;
+    margin-top: 10px;
+    display: block;
   }
 }
 
@@ -1049,6 +1313,31 @@ body {
     max-width: 400px;
     margin: 0 auto 15px;
   }
+
+  .contacts-form {
+    &__title {
+      max-width: 100%;
+      margin-bottom: 20px;
+    }
+
+    &__inputs {
+      display: block;
+    }
+
+    &__input-wrapper {
+      margin-bottom: 10px;
+    }
+
+    &__input-wrapper + &__input-wrapper {
+      padding-left: 0;
+    }
+  }
+}
+
+@media screen and (max-width: 980px) {
+  .office-list {
+    justify-content: space-around;
+  }
 }
 
 @media screen and (max-width: 920px) {
@@ -1085,6 +1374,10 @@ body {
         order: 4;
       }
     }
+  }
+
+  .sidebar-rewards {
+    width: 100%;
   }
 }
 
@@ -1186,6 +1479,60 @@ body {
   .footer {
     padding: 30px 0 20px;
   }
+
+  .sidebar__title {
+    span {
+      font-size: 16px;
+      line-height: 1.2em;
+    }
+  }
+
+  .content-w-sidebar {
+    display: block;
+  }
+
+  .content-main-text,
+  .sidebar-block {
+    width: 100%;
+    padding-right: 0;
+  }
+
+  .sidebar-block {
+    margin-top: 15px;
+  }
+
+  .contacts-form {
+    &__input-wrapper {
+      max-width: 100%;
+    }
+
+    &__text {
+      display: block;
+    }
+
+    &__textarea {
+      margin-right: 0;
+    }
+
+    &__button {
+      margin: 20px auto 0;
+      display: block;
+
+    }
+  }
+
+  .contacts-info {
+    display: block;
+
+    &__left {
+      margin-bottom: 20px;
+      max-width: 100%;
+    }
+
+    &__right {
+      max-width: 100%;
+    }
+  }
 }
 
 @media screen and(max-width: 570px) {
@@ -1278,5 +1625,9 @@ body {
     + .popular-list {
       border-top: 1px solid #3e3e3e;
     }
+  }
+
+  .vote-block__info {
+    padding: 15px;
   }
 }

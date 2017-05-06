@@ -44,13 +44,18 @@
   /* Uncomment for 3D effect */
   /* text-shadow: 1px 1px 1px rgba(127, 127, 127, 0.3); */
 }
- 
+
+
 .icon-fire:before { content: '\e800'; } /* '' */
 .icon-arr-left:before { content: '\e801'; } /* '' */
 .icon-arr-right:before { content: '\e802'; } /* '' */
 .icon-comment:before { content: '\e803'; } /* '' */
 .icon-arr-down:before { content: '\e804'; } /* '' */
 .icon-search:before { content: '\e805'; } /* '' */
+.icon-pdf:before { content: '\e806'; } /* '' */
+.icon-phone:before { content: '\e807'; } /* '' */
+.icon-at:before { content: '\e808'; } /* '' */
+.icon-send-btn:before { content: '\e809'; } /* '' */
 .icon-twitter:before { content: '\f099'; } /* '' */
 .icon-fb:before { content: '\f09a'; } /* '' */
 .icon-vk:before { content: '\f189'; } /* '' */
