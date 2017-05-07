@@ -46,6 +46,7 @@
 }
 
 
+
 .icon-fire:before { content: '\e800'; } /* '' */
 .icon-arr-left:before { content: '\e801'; } /* '' */
 .icon-arr-right:before { content: '\e802'; } /* '' */
@@ -56,6 +57,8 @@
 .icon-phone:before { content: '\e807'; } /* '' */
 .icon-at:before { content: '\e808'; } /* '' */
 .icon-send-btn:before { content: '\e809'; } /* '' */
+.icon-print:before { content: '\e80a'; } /* '' */
+.icon-view:before { content: '\e80b'; } /* '' */
 .icon-twitter:before { content: '\f099'; } /* '' */
 .icon-fb:before { content: '\f09a'; } /* '' */
 .icon-vk:before { content: '\f189'; } /* '' */
